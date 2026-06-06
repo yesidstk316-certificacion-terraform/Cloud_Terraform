@@ -1,0 +1,65 @@
+2026-05-31T14:31:12.219-0500 [INFO]  Terraform version: 1.15.4
+2026-05-31T14:31:12.237-0500 [INFO]  Go runtime version: go1.25.10
+2026-05-31T14:31:12.237-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan"}
+2026-05-31T14:31:12.240-0500 [INFO]  CLI command args: []string{"plan"}
+2026-05-31T14:31:12.751-0500 [INFO]  backend/local: starting Plan operation
+2026-05-31T14:31:12.755-0500 [INFO]  provider: configuring client automatic mTLS
+2026-05-31T14:31:12.995-0500 [INFO]  provider.terraform-provider-aws_v6.42.0_x5.exe: configuring server automatic mTLS: timestamp=2026-05-31T14:31:12.976-0500
+2026-05-31T14:31:14.092-0500 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/hashicorp/aws/6.42.0/windows_amd64/terraform-provider-aws_v6.42.0_x5.exe id=17516
+2026-05-31T14:31:14.095-0500 [INFO]  provider: configuring client automatic mTLS
+2026-05-31T14:31:14.287-0500 [INFO]  provider.terraform-provider-aws_v6.42.0_x5.exe: configuring server automatic mTLS: timestamp=2026-05-31T14:31:14.270-0500
+2026-05-31T14:31:14.391-0500 [WARN]  provider.terraform-provider-aws_v6.42.0_x5.exe: Response contains warning diagnostic: @caller=github.com/hashicorp/terraform-plugin-go@v0.31.0/tfprotov5/internal/diag/diagnostics.go:60 diagnostic_summary="Value is base64 encoded" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ValidateResourceTypeConfig @module=sdk.proto diagnostic_attribute="AttributeName(\"user_data\")" diagnostic_detail="The value is base64 encoded. If you want to use base64 encoding, please use the user_data_base64 argument. user_data attribute is set as cleartext in state" diagnostic_severity=WARNING tf_proto_version=5.11 tf_req_id=b3c1546c-3b6d-95cf-3aae-db4515b0f34c tf_resource_type=aws_instance timestamp=2026-05-31T14:31:14.391-0500
+2026-05-31T14:31:14.410-0500 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/hashicorp/aws/6.42.0/windows_amd64/terraform-provider-aws_v6.42.0_x5.exe id=27488
+2026-05-31T14:31:14.410-0500 [INFO]  backend/local: plan calling Plan
+2026-05-31T14:31:14.411-0500 [INFO]  provider: configuring client automatic mTLS
+2026-05-31T14:31:14.613-0500 [INFO]  provider.terraform-provider-aws_v6.42.0_x5.exe: configuring server automatic mTLS: timestamp=2026-05-31T14:31:14.596-0500
+2026-05-31T14:31:14.701-0500 [INFO]  provider.terraform-provider-aws_v6.42.0_x5.exe: Retrieved credentials: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider @module=aws.aws-base tf_aws.credentials_source="SharedConfigCredentials: C:\Users\USER\.aws\credentials" tf_req_id=f5df8806-e2cd-7551-e161-0c2d497fecaa @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.72/logging/tf_logger.go:39 tf_mux_provider="*schema.GRPCProviderServer" timestamp=2026-05-31T14:31:14.701-0500
+2026-05-31T14:31:15.080-0500 [INFO]  provider.terraform-provider-aws_v6.42.0_x5.exe: Retrieved caller identity from STS: @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.72/logging/tf_logger.go:39 tf_mux_provider="*schema.GRPCProviderServer" tf_req_id=f5df8806-e2cd-7551-e161-0c2d497fecaa @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider timestamp=2026-05-31T14:31:15.080-0500
+2026-05-31T14:31:15.092-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.vpc_virginia, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+2026-05-31T14:31:15.095-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.public_subnet, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+2026-05-31T14:31:15.095-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.sg_public_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2026-05-31T14:31:15.098-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.private_subnet, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+2026-05-31T14:31:15.099-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route_table.public_crt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .route: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.StringVal(""), "cidr_block":cty.StringVal("0.0.0.0/0"), "core_network_arn":cty.StringVal(""), "destination_prefix_list_id":cty.StringVal(""), "egress_only_gateway_id":cty.StringVal(""), "gateway_id":cty.UnknownVal(cty.String), "ipv6_cidr_block":cty.StringVal(""), "local_gateway_id":cty.StringVal(""), "nat_gateway_id":cty.StringVal(""), "network_interface_id":cty.StringVal(""), "transit_gateway_id":cty.StringVal(""), "vpc_endpoint_id":cty.StringVal(""), "vpc_peering_connection_id":cty.StringVal("")})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"carrier_gateway_id":cty.NullVal(cty.String), "cidr_block":cty.StringVal("0.0.0.0/0"), "core_network_arn":cty.NullVal(cty.String), "destination_prefix_list_id":cty.NullVal(cty.String), "egress_only_gateway_id":cty.NullVal(cty.String), "gateway_id":cty.UnknownVal(cty.String), "ipv6_cidr_block":cty.NullVal(cty.String), "local_gateway_id":cty.NullVal(cty.String), "nat_gateway_id":cty.NullVal(cty.String), "network_interface_id":cty.NullVal(cty.String), "transit_gateway_id":cty.NullVal(cty.String), "vpc_endpoint_id":cty.NullVal(cty.String), "vpc_peering_connection_id":cty.NullVal(cty.String)})})
+2026-05-31T14:31:15.486-0500 [WARN]  provider.terraform-provider-aws_v6.42.0_x5.exe: Response contains warning diagnostic: diagnostic_attribute="AttributeName(\"user_data\")" diagnostic_detail="The value is base64 encoded. If you want to use base64 encoding, please use the user_data_base64 argument. user_data attribute is set as cleartext in state" diagnostic_severity=WARNING tf_rpc=ValidateResourceTypeConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.31.0/tfprotov5/internal/diag/diagnostics.go:60 @module=sdk.proto diagnostic_summary="Value is base64 encoded" tf_proto_version=5.11 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3d0e03ff-d1c4-7ffa-8cf2-babf4f85020a tf_resource_type=aws_instance timestamp=2026-05-31T14:31:15.486-0500
+2026-05-31T14:31:15.489-0500 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.public_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .force_destroy: planned value cty.False for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .cpu_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .instance_market_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .maintenance_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .root_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .private_dns_name_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .secondary_network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .capacity_reservation_specification: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .primary_network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2026-05-31T14:31:15.524-0500 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/hashicorp/aws/6.42.0/windows_amd64/terraform-provider-aws_v6.42.0_x5.exe id=2648
+2026-05-31T14:31:15.526-0500 [INFO]  backend/local: plan operation completed
